@@ -52,7 +52,7 @@ function viitenumero($invoiceNumber, $returnAsString = false, $rf = false) {
         // Check if return in RF -format.
         if ($rf)
         {
-            $rfCheck = ((int)$out.'271500')%97;
+            $rfCheck = 98-(((int)$out.'271500')%97);
             return 'RF'.$rfCheck.$out;
         }
         // 00001234561 or just 1234561
